@@ -1,0 +1,17 @@
+%% 时序交互图模板 — 黑白风格 %%
+%% 用途：展示用户、智能体、工具、文件之间的调用关系 %%
+%%{init: {'theme':'base','themeVariables':{'fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px','primaryTextColor':'#000000','lineColor':'#000000','actorBkg':'#ffffff','actorBorder':'#000000','actorTextColor':'#000000','signalColor':'#000000','signalTextColor':'#000000','labelBoxBkgColor':'#ffffff','labelTextColor':'#000000','loopTextColor':'#000000','noteBkgColor':'#ffffff','noteBorderColor':'#000000','noteTextColor':'#000000','activationBkgColor':'#ffffff','activationBorderColor':'#000000'}}}%%
+sequenceDiagram
+    actor U as 用户
+    participant A as Agent
+    participant S as Skill
+    participant T as 渲染工具
+    participant F as 文件输出
+
+    U->>A: 提出图表需求
+    A->>S: 选择模板与规范
+    S->>T: 渲染 Mermaid/SVG
+    T-->>S: 返回 PNG/SVG
+    S->>F: 写入输出目录
+    F-->>U: 提供可嵌入成果
+    Note over A,S: 先校验，再渲染；失败时返回可修复原因

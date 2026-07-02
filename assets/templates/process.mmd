@@ -1,0 +1,16 @@
+%% 流程闭环图模板 — 黑白风格 %%
+%% 用途：展示“输入—处理—输出—评价—改进”的过程闭环 %%
+%% 填充一律纯白 #ffffff，强调项用更粗边框而非灰底 %%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#000000','edgeLabelBackground':'#ffffff','fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px'}}}%%
+flowchart LR
+    A["需求输入<br/>任务目标 · 约束条件"] --> B["方案设计<br/>结构规划 · 方法选择"]
+    B --> C["执行实现<br/>工具调用 · 内容生成"]
+    C --> D["质量检查<br/>格式 · 逻辑 · 可读性"]
+    D --> E["成果输出<br/>PNG · DOCX · PDF"]
+    D -. "问题反馈" .-> B
+
+    style A fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style B fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style C fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style D fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style E fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px

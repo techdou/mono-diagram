@@ -1,0 +1,20 @@
+%% 研究框架图模板 — 黑白风格 %%
+%% 用途：论文开题、研究设计、行动研究路径图 %%
+%% 填充一律纯白 #ffffff，关键节点用更粗边框区分 %%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#000000','edgeLabelBackground':'#ffffff','fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px'}}}%%
+flowchart TB
+    Q["研究问题<br/>核心概念 · 实践痛点"] --> L["文献基础<br/>理论模型 · 国内外研究"]
+    L --> D["研究设计<br/>对象 · 工具 · 数据来源"]
+    D --> A1["第一轮行动<br/>诊断问题 · 初步干预"]
+    A1 --> A2["第二轮行动<br/>优化策略 · 深化实施"]
+    A2 --> A3["第三轮行动<br/>稳定机制 · 效果验证"]
+    A3 --> C["研究结论<br/>模式修正 · 反思建议"]
+    C -. "反思修正" .-> D
+
+    style Q fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style L fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style D fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style A1 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style A2 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style A3 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style C fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px

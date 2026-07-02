@@ -1,0 +1,19 @@
+%% 分类/范式对比图模板 — 黑白风格 %%
+%% 用途：展示几种方案的分类与对比，高亮推荐项 %%
+%% 复用：替换文字后用 render 渲染 %%
+%% 填充一律纯白 #ffffff，推荐项用更粗边框而非灰底 %%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#000000','edgeLabelBackground':'#ffffff','fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px'}}}%%
+flowchart LR
+    U[输入数据] --> P{判断条件}
+
+    P -->|路径一| A["方案一<br/>说明文字<br/>补充说明"]
+    P -->|路径二| B["方案二<br/>说明文字<br/>补充说明"]
+    P -->|路径三| C["方案三<br/>说明文字<br/>补充说明"]
+
+    A --> R1[特点一]
+    B --> R2[特点二]
+    C --> R3[特点三（推荐）]
+
+    style P fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style C fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style R3 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px

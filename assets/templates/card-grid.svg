@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="'SimSun','Songti SC','Noto Serif CJK SC','Times New Roman',serif">
+  <rect width="1200" height="720" fill="#ffffff"/>
+  <line x1="600" y1="112" x2="600" y2="600" stroke="#000000" stroke-width="1.5"/>
+  <line x1="160" y1="356" x2="1040" y2="356" stroke="#000000" stroke-width="1.5"/>
+  <text x="600" y="100" text-anchor="middle" fill="#000000" font-size="13">纵轴：影响程度</text>
+  <text x="1060" y="360" fill="#000000" font-size="13">横轴：实施难度</text>
+
+  <rect x="190" y="138" width="360" height="170" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+  <text x="214" y="174" fill="#000000" font-size="15" font-weight="bold">高影响 / 低难度</text>
+  <text x="214" y="208" fill="#000000" font-size="12">优先推进事项</text>
+  <text x="214" y="236" fill="#000000" font-size="12">· 条目一　· 条目二　· 条目三</text>
+
+  <rect x="650" y="138" width="360" height="170" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+  <text x="674" y="174" fill="#000000" font-size="15" font-weight="bold">高影响 / 高难度</text>
+  <text x="674" y="208" fill="#000000" font-size="12">重点攻关事项</text>
+  <text x="674" y="236" fill="#000000" font-size="12">· 条目一　· 条目二　· 条目三</text>
+
+  <rect x="190" y="404" width="360" height="170" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+  <text x="214" y="440" fill="#000000" font-size="15" font-weight="bold">低影响 / 低难度</text>
+  <text x="214" y="474" fill="#000000" font-size="12">常规维护事项</text>
+  <text x="214" y="502" fill="#000000" font-size="12">· 条目一　· 条目二　· 条目三</text>
+
+  <rect x="650" y="404" width="360" height="170" fill="#ffffff" stroke="#000000" stroke-width="2.5"/>
+  <text x="674" y="440" fill="#000000" font-size="15" font-weight="bold">低影响 / 高难度</text>
+  <text x="674" y="474" fill="#000000" font-size="12">谨慎投入事项</text>
+  <text x="674" y="502" fill="#000000" font-size="12">· 条目一　· 条目二　· 条目三</text>
+</svg>

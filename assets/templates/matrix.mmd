@@ -1,0 +1,21 @@
+%% 挑战-对策矩阵图模板 — 黑白风格 %%
+%% 用途：展示多个问题各自对应对策，汇聚到统一目标 %%
+%% 复用：替换文字后用 render 渲染 %%
+%% 填充一律纯白 #ffffff，关键节点用更粗边框而非灰底 %%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#000000','edgeLabelBackground':'#ffffff','fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px'}}}%%
+flowchart TB
+    ROOT[问题集合] --> P1[问题一<br/>严重度：高]
+    ROOT --> P2[问题二<br/>严重度：高]
+    ROOT --> P3[问题三<br/>严重度：中]
+
+    P1 --> C1["对策一<br/>①步骤<br/>②步骤<br/>③步骤"]
+    P2 --> C2["对策二<br/>①步骤<br/>②步骤<br/>③步骤"]
+    P3 --> C3["对策三<br/>①步骤<br/>②步骤"]
+
+    C1 & C2 & C3 --> GOAL[/统一目标/]
+
+    style ROOT fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style GOAL fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style P1 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style P2 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style P3 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px

@@ -1,0 +1,76 @@
+/* mono-diagram: print-safe academic diagram defaults */
+/* Forces pure-white backgrounds everywhere so that subgraph containers and
+   edge labels never pick up the theme's default tinted/gray backing.
+   This is the authoritative style layer; mono-mermaid.json sets the same
+   values at the Mermaid theme level as a first line of defense. */
+svg {
+  background: #ffffff !important;
+}
+* {
+  font-family: SimSun, "Songti SC", "Noto Serif CJK SC", "Times New Roman", serif !important;
+}
+
+/* Node shapes: pure-white fill, black stroke. */
+.node rect,
+.node polygon,
+.node circle,
+.node ellipse,
+.node path {
+  fill: #ffffff !important;
+  stroke: #000000 !important;
+}
+
+/* Cluster / subgraph containers: pure white, no tinted backing.
+   Mermaid otherwise paints subgraphs with the theme's secondary/tertiary
+   color, which reads as a blue or gray panel in print. */
+.cluster rect,
+.cluster polygon,
+.cluster > rect {
+  fill: #ffffff !important;
+  stroke: #000000 !important;
+  background: #ffffff !important;
+}
+.cluster {
+  fill: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* Text, labels, and edges: pure black. */
+.label,
+.nodeLabel,
+.edgeLabel,
+.messageText,
+.actor,
+.cluster text,
+.cluster-label {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+.edgePath path,
+.flowchart-link {
+  stroke: #000000 !important;
+}
+
+/* Edge-label backing rectangles: pure white, no gray/semi-transparent pad.
+   Mermaid auto-pads edge labels with labelBkg; without this override they
+   render with a faint gray box behind the arrow text. */
+.edgeLabel,
+.edgeLabel rect,
+.edgeLabel .label,
+.edgeLabel .label rect,
+.edgeLabel foreignObject,
+.edgeLabel foreignObject > div,
+.edgeLabel foreignObject > div > div,
+.labelBkg,
+.edge-thickness-normal .edgeLabel,
+.edge-thickness-thick .edgeLabel {
+  fill: #ffffff !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+/* Catch-all: any element carrying a background inside an edge label. */
+g.edgeLabel *,
+foreignObject > div {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}

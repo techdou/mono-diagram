@@ -1,0 +1,21 @@
+%% 分层架构图模板 — 黑白风格 %%
+%% 用途：展示系统的分层架构与反馈回流 %%
+%% 复用：替换文字后用 render 渲染 %%
+%% 填充一律纯白 #ffffff，仅靠边框线宽区分层次 %%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#ffffff','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#000000','secondaryColor':'#ffffff','tertiaryColor':'#ffffff','clusterBkg':'#ffffff','clusterBorder':'#000000','edgeLabelBackground':'#ffffff','fontFamily':'SimSun, Songti SC, Noto Serif CJK SC, Times New Roman, serif','fontSize':'14px'}}}%%
+flowchart TB
+    S1["第一层：输入<br/>子模块用 · 分隔"]
+    S2["第二层：处理<br/>流程用 → 串联"]
+    S3["第三层：核心<br/>说明文字"]
+    S4["第四层：输出<br/>说明文字"]
+    S5["第五层：反馈<br/>说明文字"]
+
+    S1 --> S2 --> S3 --> S4 --> S5
+    S5 -. "反馈回流" .-> S3
+    S5 -. "反馈回流" .-> S2
+
+    style S1 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
+    style S2 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2px
+    style S3 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2.5px
+    style S4 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:2px
+    style S5 fill:#ffffff,color:#000000,stroke:#000000,stroke-width:1.5px
