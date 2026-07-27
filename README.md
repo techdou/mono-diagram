@@ -1,4 +1,27 @@
-# mono-diagram
+# mono-diagram | 黑白学术图
+
+[English](#english) | [中文](#中文)
+
+---
+
+<a id="中文"></a>
+## 中文
+
+轻量 Agent Skill，用于生成**纯黑白学术图**：创建 Mermaid/SVG 源码，lint 检查黑白打印安全性，渲染高分辨率 PNG 供 Word/PDF 报告使用。
+
+### 触发场景
+
+- 论文、开题报告、课程论文、Word/PDF 报告配图
+- 黑白图、报告图、架构/流程/研究框架/时序/矩阵/UI 线框图
+- Mermaid、SVG 流程图、系统图
+- 写作过程中需要"画个图"、"做张示意图"
+
+下方英文为完整文档。
+
+---
+
+<a id="english"></a>
+## English
 
 A compact skill for **monochrome academic diagrams**: create Mermaid/SVG sources, lint them for black-and-white print safety, and render high-resolution PNG files for Word/PDF reports.
 
